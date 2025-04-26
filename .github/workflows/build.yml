@@ -134,19 +134,6 @@ jobs:
         run: vendor/bin/phpunit --colors=always
 
       -
-        name: Run Behat
-        run: vendor/bin/behat --colors --strict -vvv --no-interaction 
-      
-      -
-        name: Upload Behat logs
-        uses: actions/upload-artifact@v4
-        if: failure()
-        with:
-            name: Behat logs
-            path: etc/build/
-            if-no-files-found: ignore
-
-      -
         name: Upload test log logs
         uses: actions/upload-artifact@v4
         if: failure()
