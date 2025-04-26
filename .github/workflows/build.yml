@@ -119,7 +119,7 @@ jobs:
 
       -
         name: Load fixtures
-        run: bin/console doctrine:fixtures:load -n
+        run: bin/console doctrine:fixtures:load --allow-no-fixtures -n
 
       -
         name: Validate composer.json
